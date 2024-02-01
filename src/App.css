@@ -1,38 +1,68 @@
 .App {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .App {
+    max-width: 50%;
+  }
+}
+
+.schools-header {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.schools-nav {
+  margin-bottom: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.schools-list {
+  margin: 20px 0;
+  padding: 0;
+  list-style-type: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.schools-list-item .school-name {
+  font-weight: 500;
 }
 
-.App-link {
-  color: #61dafb;
+.schools-list-item.open .school-name {
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.schools-list-item > div {
+  padding: 5px 0;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.school-name {
+  margin: 0;
+}
+
+.school-details {
+  display: none;
+}
+
+.school-details strong {
+  font-weight: 600;
+}
+
+.school-details ul {
+  margin: 0 0 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.school-details ul ul {
+  padding: 0 0 0 25px;
+  list-style-type: disc;
+}
+
+.schools-list-item.open .school-details {
+  display: block;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed grey;
 }

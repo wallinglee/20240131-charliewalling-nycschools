@@ -2,8 +2,12 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe("Testing default App state", () => {
+  beforeEach(() => {
+    render(<App />)
+  });
+
+  it('should show a loading message', async () => {
+    expect(screen.getByText(/Loading/i)).toBeInTheDocument()
+  });
 });
