@@ -1,7 +1,6 @@
 # NYC Schools app
 
-This app lists NYC schools and associated SAT scores.\
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app lists NYC schools and associated SAT scores.
 
 ## Available Scripts
 
